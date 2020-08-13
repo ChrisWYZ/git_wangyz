@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    <p>213121321</p>
+    <div id="app1">cnm{{message}}
+    <div>{{toto}}</div>
+    <input type="text" v-model="toto">
+    <div>
+        <a v-on:click="dosomething">这是一个链接</a>
+        <a v-bind:title="message">这是一个链接</a>
+
+    </div>
+    </div>
+    
+</body>
+
+<script>
+    var app1 = new Vue({
+        el:'#app1',
+        data: {
+            message: '页面加载于 ' + new Date().toLocaleString(),
+            toto: 'doadjoisajd',
+            
+        },
+        methods: {
+            dosomething:function(){
+                alert(this.toto)
+            }
+        },
+    })
+</script>
+</html>
